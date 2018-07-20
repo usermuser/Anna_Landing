@@ -48,11 +48,11 @@ footer p {
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
 .card-body {
-  background-color: #f4efe1;
+  background-color: #f7f1e2;
 }
 
 .album {
   background: url("bg_wood2-min.jpg") no-repeat center center; 
   background-size: cover;
-  background-color: #f4efe1;
+  background-color: #f7f1e2;
 }
