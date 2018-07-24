@@ -4,6 +4,9 @@ import cgi
 import html
 import smtplib
 
+import sys
+import codecs
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 # import sys
 # reload(sys)
 # sys.setdefaultencoding('utf8')
