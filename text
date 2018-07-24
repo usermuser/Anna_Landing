@@ -73,3 +73,5 @@ ______________________
 
 
 to_email: happypelmeni@yandex.ru
+
+python3 -m http.server --cgi

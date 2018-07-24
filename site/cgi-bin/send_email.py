@@ -3,6 +3,10 @@
 import requests
 import smtplib
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 
 url = 'http://api.myip.com'
 login = 'api.myip.com@gmail.com'
@@ -21,7 +25,7 @@ if r.status_code == 200:
     smtpObj.starttls()
     smtpObj.login(login, psw)
     smtpObj.sendmail(from_email, to_email, text)
-    print('email sended =', text)
+    # print('email sended =', text)
         
 else:
     print('Error occured, server status_code =', r.status_code)
