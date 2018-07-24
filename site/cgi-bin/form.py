@@ -1,7 +1,18 @@
 #!/usr/bin/env python3
-#coding: utf-8
+# -*- coding: utf-8 -*-
 import cgi
 import html
+import smtplib
+
+from_email = "api.myip.com@gmail.com"
+to_email = "xakacb4@mail.ru"
+# to_email = "happypelmeni@yandex.ru"
+
+smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
+smtpObj.starttls()
+smtpObj.login(login, psw)
+smtpObj.sendmail(from_email, to_email, text)
+print('email sended =', text)
 
 form = cgi.FieldStorage()
 
