@@ -15,8 +15,8 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 login = 'api.myip.com@gmail.com'
 psw = '89043019528Rustam'
 from_email = "api.myip.com@gmail.com"
-to_email = "xakacb4@mail.ru"
-# to_email = "happypelmeni@yandex.ru"
+# to_email = "xakacb4@mail.ru"
+to_email = "happypelmeni@yandex.ru"
 
 
 form = cgi.FieldStorage()
@@ -49,10 +49,10 @@ print("""<!DOCTYPE HTML>
         <body>""")
 
 print("<h1>Ваша заявка принята</h1>")
-print("<p>exampleInputEmail1: {}</p>".format(email))
-print("<p>phone: {}</p>".format(phone))
-print("<p>exampleFormControlTextarea1: {}</p>".format(encoded_text))
-print("<p>msg: {}</p>".format(encoded_text))
+# print("<p>exampleInputEmail1: {}</p>".format(email))
+# print("<p>phone: {}</p>".format(phone))
+# print("<p>exampleFormControlTextarea1: {}</p>".format(encoded_text))
+# print("<p>msg: {}</p>".format(encoded_text))
 # print("<p>msg: {}</p>".format(t))
 
 
