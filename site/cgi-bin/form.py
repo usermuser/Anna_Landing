@@ -24,14 +24,17 @@ email = form.getfirst("exampleInputEmail1", " Email empty")
 phone = form.getfirst("phone", "Phone empty")
 text = form.getfirst("exampleFormControlTextarea1", "Text empty")
 email = html.escape(email)
+# text = "Сообщение: " + text + " номер телефона: " + phone
+text = text + phone
 text = html.escape(text)
+phone = html.escape(phone)
 encoded_text = text.encode('utf8')
 
 
 smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
 smtpObj.starttls()
 smtpObj.login(login, psw)
-smtpObj.sendmail(from_email, to_email, "Telephone: " + phone + " Text:" + encoded_text)
+smtpObj.sendmail(from_email, to_email, encoded_text)
 # print('email sended =', text)
 
 
@@ -45,9 +48,11 @@ print("""<!DOCTYPE HTML>
         <body>""")
 
 print("<h1>Ваша заявка принята</h1>")
-# print("<p>exampleInputEmail1: {}</p>".format(email))
-# print("<p><a href="счастьевкаждыйдом.рф"></a></p>")
-# print("<p>exampleFormControlTextarea1: {}</p>".format(text))
+print("<p>exampleInputEmail1: {}</p>".format(email))
+print("<p>phone: {}</p>".format(phone))
+print("<p>exampleFormControlTextarea1: {}</p>".format(encoded_text))
+# print("<p>msg: {}</p>".format(msg))
+
 
 print("""</body>
         </html>""")
