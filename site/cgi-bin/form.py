@@ -15,13 +15,14 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 login = 'api.myip.com@gmail.com'
 psw = '89043019528Rustam'
 from_email = "api.myip.com@gmail.com"
-# to_email = "xakacb4@mail.ru"
-to_email = "happypelmeni@yandex.ru"
+to_email = "xakacb4@mail.ru"
+# to_email = "happypelmeni@yandex.ru"
 
 
 form = cgi.FieldStorage()
-email = form.getfirst("exampleInputEmail1", "Empty")
-text = form.getfirst("exampleFormControlTextarea1", "Empty")
+email = form.getfirst("exampleInputEmail1", " Email empty")
+phone = form.getfirst("phone", "Phone empty")
+text = form.getfirst("exampleFormControlTextarea1", "Text empty")
 email = html.escape(email)
 text = html.escape(text)
 encoded_text = text.encode('utf8')
@@ -30,7 +31,7 @@ encoded_text = text.encode('utf8')
 smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
 smtpObj.starttls()
 smtpObj.login(login, psw)
-smtpObj.sendmail(from_email, to_email, encoded_text)
+smtpObj.sendmail(from_email, to_email, "Telephone: " + phone + " Text:" + encoded_text)
 # print('email sended =', text)
 
 

@@ -13,6 +13,7 @@ login = 'api.myip.com@gmail.com'
 psw = '89043019528Rustam'
 from_email = "api.myip.com@gmail.com"
 to_email = "xakacb4@mail.ru"
+# to_email = happypelmeni@yandex.ru
 
 
 r = requests.get(url)
