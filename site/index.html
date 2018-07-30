@@ -80,16 +80,16 @@
             <div class="col-lg-4 align-self-center">
               <div class="card">
                 <div class="card-body">
-                  <form action="cgi-bin/form.py">
+                  <form action="submit" method="post">
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">Оставь заявку, мы пришлем тебе прайс и порцию вкуснейших пельменей на пробу!</label>
-                      <input type="email" class="form-control" name="exampleInputEmail1" aria-describedby="Введите почту" placeholder="Введите почту">
+                      <input type="email" class="form-control" name="exampleInputEmail1" id="exampleInputEmail1" aria-describedby="Введите почту" placeholder="Введите почту">
                     </div>
 
                     <div class="form-group">
                       <!-- <label for="phone"></label> -->
-                      <input type="text" class="form-control" id="phone" placeholder="Введите телефон">
+                      <input type="text" class="form-control" name="phone" id="phone" placeholder="Введите телефон">
                     </div>
 
                     <div class="form-group">
@@ -97,7 +97,7 @@
                       <textarea class="form-control" name="exampleFormControlTextarea1" rows="4"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-secondary">Отправить</button>
+                    <button type="submit" id="submit_button" class="btn btn-secondary">Отправить</button>
                   </form>
                 </div>
               </div>
@@ -244,6 +244,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="sendmail.js"></script>
     <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
     <script src="popper.min.js"></script>
     <script src="bootstrap.js"></script>
