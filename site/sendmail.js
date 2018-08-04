@@ -1,12 +1,12 @@
-function get_form_data(){
-	var email = $('#exampleInputEmail1').val();
-	var phone = $('#phone').val();
-	console.log(email, phone);
+$.ajax({
+	type:'POST'
+	url:'cgi-bin/form.py'
+	data:
+	success:function(data) {
 
-}
-
-
-$('#submit_button').click(function(){
-	
-	
+	}
 })
+
+
+
+// {"key":value, "key":value}
