@@ -84,3 +84,7 @@ python3 -m http.server --cgi
 
 sudo service nginx restart
 sudo service fcgiwrap restart
+
+
+http://счастьевкаждыйдом.рф/cgi-bin/form.py  
+номер цели 40318213
