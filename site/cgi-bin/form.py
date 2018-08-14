@@ -15,22 +15,23 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 login = 'api.myip.com@gmail.com'
 psw = '89043019528Rustam'
 from_email = "api.myip.com@gmail.com"
-# to_email = "xakacb4@mail.ru"
-to_email = "happypelmeni@yandex.ru"
+to_email = "xakacb4@mail.ru"
+# to_email = "happypelmeni@yandex.ru"
 
 
 form = cgi.FieldStorage()
+
 email = form.getfirst("exampleInputEmail1", " Email empty")
 phone = form.getfirst("phone", "Phone empty")
 text = form.getfirst("exampleFormControlTextarea1", "Text empty")
-email = html.escape(email)
-text = str(text)
-phone = ("  " + str(phone))
-# text = "Сообщение: " + text + "номер телефона: " + phone
-text = text + phone
 
-text = html.escape(text)
+email = html.escape(email)
+# text = html.escape(text)
 phone = html.escape(phone)
+
+# text = str(text)
+phone = ("  " + str(phone))
+text = email + phone
 encoded_text = text.encode('utf8')
 
 smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
